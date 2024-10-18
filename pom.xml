@@ -9,10 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>BookService</artifactId>
+    <artifactId>LibraryManagement</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>BookService</name>
-    <description>BookService</description>
+    <packaging>pom</packaging>
+    <name>LibraryManagement</name>
+    <description>LibraryManagement</description>
     <url/>
     <licenses>
         <license/>
@@ -20,6 +21,10 @@
     <developers>
         <developer/>
     </developers>
+    <modules>
+        <module>BookService</module>
+        <module>BookOrderService</module>
+    </modules>
     <scm>
         <connection/>
         <developerConnection/>
@@ -39,11 +44,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.liquibase</groupId>
-            <artifactId>liquibase-core</artifactId>
-        </dependency>
-
-        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
@@ -59,9 +59,9 @@
             <version>1.6.0.Beta1</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>4.1.3</version>
         </dependency>
     </dependencies>
 

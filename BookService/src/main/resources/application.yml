@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  application:
+  name: BookService
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5441/library_management_db
+    username: my_user
+    password: 12345
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: db/changelog/main-changelog.xml
+
+  redis:
+    host: localhost
+    port: 6380
+    time-to-live:
+      books: 60000
